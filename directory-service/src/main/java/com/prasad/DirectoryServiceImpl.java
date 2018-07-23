@@ -36,7 +36,7 @@ public class DirectoryServiceImpl implements DirectoryService {
                 FileModel fileModel = new FileModel();
                 String mimeType = mimeTypesMap.getContentType(file);
                 fileModel.setFileMimetype(mimeType);
-                fileModel.setFileName(file.getName());
+                fileModel.setFileName(file.getAbsolutePath());
                 String extension = FilenameUtils.getExtension(file.getAbsolutePath());
                 fileModel.setFileExtension(extension);
                 fileModel.setFileSize(file.length());
